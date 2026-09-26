@@ -23,5 +23,10 @@ mpd/sticker.sql
 LOCK
 LOG*
 
-# Wallpapers (large media files)
-wallpapers/
+# Videos
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.webm
+*.m4v
