@@ -1,0 +1,44 @@
+layout {
+    background-color "transparent"
+    gaps 8
+    center-focused-column "never"
+    
+    border {
+        width 2
+    }
+    
+    focus-ring {
+        width 1
+    }
+
+    // Equivalente a MangoWM, con una ligera proyeccion abajo a la derecha.
+    shadow {
+        on
+        softness 7
+        spread 7
+        offset x=2 y=3
+        color "#000000a8"
+    }
+    
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+    
+    struts 
+}
+
+window-rule {
+    tiled-state true
+}
+
+// Regla para el wallpaper estacionario
+layer-rule {
+    match namespace="^noctalia-wallpaper"
+    place-within-backdrop true
+}
+
+hotkey-overlay {
+    skip-at-startup ;
+}

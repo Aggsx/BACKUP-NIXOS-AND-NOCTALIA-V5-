@@ -1,0 +1,37 @@
+/**
+ * @name Ambxst
+ * @description A Discord recolor theme, generated with Ambxst.
+ * @author Axenide
+ * @version 1.0.0
+ * @invite gHG9WHyNvH
+ * @website https://axeni.de/ambxst
+ * @source https://github.com/Axenide/Ambxst
+ * @authorId 294856304969908224
+ * @authorLink https://axeni.de
+*/ 
+
+@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.css');
+
+:root {
+  --accentcolor: 59,96,143;
+  --accentcolor2: 84,95,113;
+  --linkcolor: 73,93,146;
+  --mentioncolor: 82,101,38;
+  --textbrightest: 25,28,32;
+  --textbrighter: 29,32,37;
+  --textbright: 34,39,44;
+  --textdark: 45,51,58;
+  --textdarker: 55,62,71;
+  --textdarkest: 80,89,102;
+  --font: Roboto Condensed, gg sans;
+  --backgroundaccent: 224,227,243;
+  --backgroundprimary: 235,238,255;
+  --backgroundsecondary: 214,216,232;
+  --backgroundsecondaryalt: 204,207,222;
+  --backgroundtertiary: 196,198,212;
+  --backgroundfloating: 224,227,243;
+  --settingsicons: 1;
+}
+
+/* Any custom CSS below here */ 
+

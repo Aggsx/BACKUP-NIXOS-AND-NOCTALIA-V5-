@@ -1,0 +1,28 @@
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+overview {
+    zoom 0.5
+}
+
+environment {
+      XDG_DATA_DIRS "/run/current-system/sw/share:/usr/local/share:/usr/share:/var/lib/flatpak/exports/share:~/.local/share/flatpak/exports/share"
+}
+
+include "animations.kdl"
+include "autostart.kdl"
+include "input.kdl"
+include "keybinds.kdl"
+include "visual.kdl"
+include "window-rules.kdl"
+include "noctalia.kdl"
+//include "layout.kdl"
+include "display.kdl"
+
+// Valores trasladados desde la config de Umbriel ([appearance.blur])
+blur {
+    passes 4
+    offset 3.0
+    noise 0.02
+    saturation 1.5
+}
+prefer-no-csd

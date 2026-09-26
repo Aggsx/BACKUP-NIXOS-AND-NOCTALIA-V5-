@@ -1,0 +1,11 @@
+// ────────────── Startup Applications ──────────────
+
+    // Polkit (Versión para NixOS)
+    spawn-sh-at-startup "/run/current-system/sw/libexec/polkit-gnome-authentication-agent-1 &"
+
+    // Iniciar Noctalia Shell (Usa simplemente noctalia-shell)
+    spawn-at-startup "noctalia"
+
+    // Sincronización de DBus (Vital para evitar el lag de 2 min)
+    spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
+

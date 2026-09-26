@@ -1,0 +1,29 @@
+// ────────────── Input Configuration ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+
+input {
+    keyboard {
+        xkb {
+            layout "us" // Use the American keyboard layout
+            variant "intl"
+        }
+        numlock // Enable numlock on startup
+    }
+
+    touchpad {
+        tap // Enable tap-to-click
+        natural-scroll // Enable natural (macOS-style) scrolling
+    }
+
+    focus-follows-mouse // Automatically focus windows under the mouse pointer
+    workspace-auto-back-and-forth // Enable workspace back & forth switching
+
+    mouse
+}
+
+// En versiones recientes, Niri prefiere que el cursor se defina vía variables de entorno
+// Pero si quieres intentarlo en el config, usa este bloque fuera de 'input':
+// cursor {
+//   xcursor-theme "Bibata-Gruvbox"
+//   xcursor-size 24
+// }

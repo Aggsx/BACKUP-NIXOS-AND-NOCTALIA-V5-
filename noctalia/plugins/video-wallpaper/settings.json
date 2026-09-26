@@ -1,0 +1,19 @@
+{
+  "activeBackend": "qt6-multimedia",
+  "automationMode": "random",
+  "automationTime": 300,
+  "fillMode": "fit",
+  "mpvSocket": "/tmp/mpv-socket",
+  "profile": "default",
+  "volume": 1,
+  "wallpapersFolder": "/home/axelnixos/Imágenes/wallpapers",
+  "thumbCacheReady": true,
+  "eDP-1": {
+    "currentWallpaper": "/home/axelnixos/Imágenes/wallpapers/otori-emu-project-sekai-moewalls-com.mp4",
+    "isPlaying": true,
+    "noctaliaWallpaper": "/home/axelnixos/Imágenes/wallpapers/wallpaper-28.png",
+    "isMuted": true
+  },
+  "enabled": false
+}
+

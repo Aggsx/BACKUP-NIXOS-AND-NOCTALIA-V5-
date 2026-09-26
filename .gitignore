@@ -1,0 +1,27 @@
+# Caches, logs, databases and session data
+**/sessionData/
+**/Cache/
+**/Code Cache/
+**/DawnGraphiteCache/
+**/DawnWebGPUCache/
+**/GPUCache/
+**/Local Storage/
+**/Session Storage/
+**/WebStorage/
+**/Crashpad/
+**/Service Worker/
+**/Shared Dictionary/
+
+mpd/database
+mpd/state
+mpd/log
+mpd/pid
+mpd/sticker.sql
+
+*.log
+*.lock
+LOCK
+LOG*
+
+# Wallpapers (large media files)
+wallpapers/

@@ -1,0 +1,9 @@
+{
+  "screens": [
+    {
+      "name": "eDP-1",
+      "light": "/home/axelnixos/Imágenes/wallpapers/minimal_nord_guy.png",
+      "dark": "/home/axelnixos/Imágenes/wallpapers/minimal_nord_guy.png"
+    }
+  ]
+}

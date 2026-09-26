@@ -1,0 +1,50 @@
+[config]
+
+[templates]
+
+# User-defined templates
+# Add your custom templates below
+# Example:
+
+[theme.templates.user.sway-noctalia]
+input_path  = '~/.config/noctalia/templates/sway-noctalia'
+output_path = '~/.config/sway/noctalia'
+post_hook   = 'swaymsg reload'
+
+[templates.cava]
+input_path = '~/.config/noctalia/templates/cava'
+output_path = '~/.config/cava/themes/noctalia'
+post_hook = 'pkill -SIGUSR2 cava'
+
+[theme.templates.user.rmpc]
+input_path = '~/.config/noctalia/templates/rmpc-theme.ron'
+output_path = '~/.config/rmpc/themes/current.ron'
+post_hook = '/home/axelnixos/.config/noctalia/scripts/refresh_rmpc.sh'
+
+[theme.templates.user.pywalfox]
+input_path = '~/.config/matugen/templates/pywalfox-colors.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update'
+
+[theme.templates.user.firefox-website-colors]
+input_path = '~/.config/matugen/templates/firefox-colors.css'
+output_path = '/home/axelnixos/.config/librewolf/librewolf/btdgf90m.default/chrome/colors.css'
+
+[theme.templates.user.flow]
+input_path = "~/.config/noctalia/templates/flow.toml"
+output_path = "~/.config/flow/themes/dynamic.toml"
+post_hook = " "
+
+[theme.templates.user.cliamp]
+input_path = "~/.config/noctalia/templates/cliamp.toml"
+output_path = "~/.config/cliamp/themes/noctalia.toml"
+post_hook = "cliamp theme noctalia"
+
+[theme.templates.user.noctalia-papirus]
+input_path  = "~/.config/noctalia/templates/Noctalia-Papirus.sh"
+output_path = "~/.cache/noctalia/Noctalia-Papirus-apply.sh"
+post_hook   = "bash ~/.cache/noctalia/Noctalia-Papirus-apply.sh"
+
+[theme.templates.user.vesktop]
+input_path  = "~/.config/noctalia/templates/discord.css"
+output_path = "~/.config/vesktop/themes/noctalia.theme.css"

@@ -1,0 +1,12 @@
+[launcher]
+scan_paths = [
+  "/run/current-system/sw/share/applications",
+  "/etc/profiles/per-user/axelnixos/share/applications",
+  "/home/axelnixos/.nix-profile/share/applications",
+  "/var/lib/flatpak/exports/share/applications",
+  "/home/axelnixos/.local/share/applications"
+]
+
+[audio]
+backend = "pipewire"
+device = "@DEFAULT_AUDIO_SINK@"
