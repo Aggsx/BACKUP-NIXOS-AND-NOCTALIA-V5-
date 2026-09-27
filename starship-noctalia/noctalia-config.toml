@@ -1,0 +1,293 @@
+# Config de Noctalia 5.1.0 -- importada de la maquina NixOS
+# (BACKUP-NIXOS-AND-NOCTALIA-V5-/noctalia configs/noctalia-config.toml)
+# y traducida a Devuan: rutas de home, rutas de apps, y los widgets/plugins
+# que solo existian en NixOS. Ver /home/axelordz/niri-devuan-notas.md
+#
+# Esta es la capa declarativa (~/.config/noctalia/*.toml). El archivo
+# ~/.local/state/noctalia/settings.toml guarda los overrides de la GUI y
+# tiene prioridad sobre este, asi que no debe volver a guardar aqui los
+# valores de la barra, el tema o el fondo.
+
+[accessibility]
+ui_scale = 0.95000000670552254
+
+[audio]
+enable_overdrive = true
+
+[backdrop]
+blur_intensity = 0.0
+enabled = true
+tint_intensity = 0.0
+
+[bar.default]
+background_opacity = 0.90999997965991497
+border = "primary"
+capsule = true
+capsule_opacity = 0.0
+capsule_padding = 4.0
+capsule_radius = 0
+center = [ "clock", "weather" ]
+color = "primary"
+end = [
+    "tray",
+    "notifications",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "control-center"
+]
+font_family = "CozetteVector"
+margin_edge = 3
+margin_opposite_edge = 1
+radius = 0
+shadow = false
+start = [ "launcher", "workspaces", "media" ]
+
+[config]
+
+[dock]
+auto_hide = true
+radius = 10
+radius_bottom_left = 0
+radius_bottom_right = 0
+radius_top_left = 10
+reserve_space = false
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 960.0
+    cy = 961.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[osd]
+background_opacity = 0.90999997965991497
+
+[shell]
+avatar_path = "/home/axelordz/Pictures/logo.png"
+corner_radius_scale = 0.0
+font_family = "CozetteVector"
+lang = "es"
+password_style = "random"
+polkit_agent = true
+
+    [shell.animation]
+    speed = 1.5000000223517418
+
+    [shell.launcher]
+    categories = false
+
+    [shell.panel]
+    transparency_mode = "soft"
+
+    [shell.shadow]
+    alpha = 0.99999997764825821
+    direction = "down_right"
+
+[theme.templates.user.cava]
+input_path = "~/.config/noctalia/templates/cava"
+output_path = "~/.config/cava/themes/noctalia"
+post_hook = "pkill -SIGUSR2 cava"
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "Tokyo Night Storm"
+custom_palette = "1381912-mc"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [
+        "btop",
+        "cava",
+        "foot",
+        "gtk3",
+        "gtk4",
+        "ghostty",
+        "kcolorscheme",
+        "kitty",
+        "mango",
+        "niri",
+        "qt",
+        "sway",
+        "umbriel"
+    ]
+    community_ids = [ "opencode", "brave", "discord", "heroiclauncher", "steam", "obs", "yazi" ]
+
+        [theme.templates.user.cliamp]
+        input_path = "~/.config/noctalia/templates/cliamp.toml"
+        output_path = "~/.config/cliamp/themes/noctalia.toml"
+        post_hook = "cliamp theme noctalia"
+
+        # Palette Material para starship: tus módulos usan primary/on_primary/
+        # surface_variant/tertiary/error/outline, que el palette "noctalia" del
+        # template builtin no define (por eso el prompt salía sin color).
+        [theme.templates.user.starship_palette]
+        input_path = "~/.config/noctalia/templates/starship-palette.toml"
+        output_path = "~/.cache/noctalia/starship-palette.toml"
+        post_hook = "bash '/home/axelordz/.config/noctalia/scripts/merge-starship-palette.sh'"
+
+        [theme.templates.user.flow]
+        input_path = "~/.config/noctalia/templates/flow.toml"
+        output_path = "~/.config/flow/themes/dynamic.toml"
+        post_hook = " "
+
+        [theme.templates.user.noctalia-papirus]
+        input_path = "~/.config/noctalia/templates/Noctalia-Papirus.sh"
+        output_path = "~/.cache/noctalia/Noctalia-Papirus-apply.sh"
+        post_hook = "bash ~/.cache/noctalia/Noctalia-Papirus-apply.sh"
+
+        [theme.templates.user.rmpc]
+        input_path = "~/.config/noctalia/templates/rmpc-theme.ron"
+        output_path = "~/.config/rmpc/themes/current.ron"
+        post_hook = "/home/axelordz/.config/noctalia/scripts/refresh_rmpc.sh"
+
+        [theme.templates.user.sway-noctalia]
+        input_path = "~/.config/noctalia/templates/sway-noctalia"
+        output_path = "~/.config/sway/noctalia"
+        post_hook = "swaymsg reload"
+
+        [theme.templates.user.vesktop]
+        input_path = "~/.config/noctalia/templates/discord.css"
+        output_path = "~/.config/vesktop/themes/noctalia.theme.css"
+
+[wallpaper]
+directory = "/home/axelordz/Pictures/wallpapers"
+edge_smoothness = 0.0
+transition = [ "disc" ]
+transition_duration = 100
+
+    [wallpaper.default]
+    path = "/home/axelordz/Pictures/wallpapers/1381912.webp"
+
+    [wallpaper.last]
+    path = "/home/axelordz/Pictures/wallpapers/1381912.webp"
+
+    [wallpaper.monitor.eDP-1]
+    fill_color = "tertiary"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/axelordz/Pictures/wallpapers/1381912.webp"
+
+    [[wallpaper.favorite]]
+    community_palette = "Atuel"
+    palette_source = "community"
+    path = "/home/axelordz/Pictures/wallpapers/mima.png"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/axelordz/Pictures/wallpapers/-.png"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+    [[wallpaper.favorite]]
+    community_palette = "Catppuccin Macchiato Blue"
+    palette_source = "community"
+    path = "/home/axelordz/Pictures/wallpapers/AnimeGirlFlower.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    community_palette = "Cream Autumn"
+    palette_source = "community"
+    path = "/home/axelordz/Pictures/wallpapers/a_painting_of_flowers_and_a_glass_of_wine.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    community_palette = "Cream Autumn"
+    palette_source = "community"
+    path = "/home/axelordz/Pictures/wallpapers/Sif.png"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Kanagawa"
+    palette_source = "builtin"
+    path = "/home/axelordz/Pictures/wallpapers/glasses.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    community_palette = "Kanagawa Kasumi"
+    palette_source = "community"
+    path = "/home/axelordz/Pictures/wallpapers/Light/kanagawa kasumi/wallpaper-theme-converter1.png"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Rosé Pine"
+    palette_source = "builtin"
+    path = "/home/axelordz/Pictures/wallpapers/misumi_yoshida_noel.png"
+    theme_mode = "light"
+
+    [[wallpaper.favorite]]
+    community_palette = "Rose Pine Moon"
+    palette_source = "community"
+    path = "/home/axelordz/Pictures/wallpapers/gachiakuta.jpg"
+    theme_mode = "dark"
+
+    [[wallpaper.favorite]]
+    community_palette = "Tokyo Night Moon"
+    palette_source = "community"
+    path = "/home/axelordz/Pictures/wallpapers/tokyo night moon/Samurai_treinando_na_floresta_de_bambu.png"
+    theme_mode = "dark"
+
+[widget.battery]
+display_mode = "graphic"
+
+[widget.clock]
+format = "%I:%M %p"
+
+[widget.control-center]
+glyph = "snowflake"
+
+[widget.launcher]
+glyph = "apps-filled"
+
+[widget.media]
+album_art_only = true
+
+[widget.network]
+show_label = false
+
+[widget.tray]
+anchor = true
+
+[widget.weather]
+show_condition = false
+
+[widget.workspaces]
+hide_when_empty = true
